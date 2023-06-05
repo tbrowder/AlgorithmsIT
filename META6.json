@@ -1,0 +1,25 @@
+{
+  "auth": "zef:tbrowder",
+  "authors": [
+    "Tom Browder"
+  ],
+  "build-depends": [
+  ],
+  "depends": [
+  ],
+  "description": "Provides some functions from 'Introduction to Algorithms', Third Edition",
+  "license": "Artistic-2.0",
+  "name": "AlgorithmsIT",
+  "perl": "6.d",
+  "provides": {
+    "AlgorithmsIT": "lib/AlgorithmsIT.rakumod"
+  },
+  "resources": [
+  ],
+  "source-url": "",
+  "tags": [
+  ],
+  "test-depends": [
+  ],
+  "version": "0.0.1"
+}

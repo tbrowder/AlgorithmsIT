@@ -50,10 +50,16 @@ is @shifts.elems, 0, "no match, shifts list is empty (pattern longer than text)"
 $pattern = "bab";
 $text = "ababedbab"; # expect shifts at: 1, 6
 $P .= new: $pattern;
+say "P elems: ", $P.elems;
+
 $T .= new: $text;
 @shifts = KMP-Matcher $T, $P;
-is @shifts.head, 1;
-is @shifts.tail, 6;
+is @shifts.head, 1, "new pattern 'bab', first shift";;
+is @shifts.tail, 6, "new pattern 'bab', second shift";;
+
+done-testing;
+
+=finish
 
 $P .= new: $text;
 

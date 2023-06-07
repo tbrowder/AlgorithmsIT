@@ -12,11 +12,12 @@
   "name": "AlgorithmsIT",
   "perl": "6.d",
   "provides": {
-    "AlgorithmsIT": "lib/AlgorithmsIT.rakumod"
+    "AlgorithmsIT": "lib/AlgorithmsIT.rakumod",
+    "Index1Array": "lib/Index1Array.rakumod"
   },
   "resources": [
   ],
-  "source-url": "",
+  "source-url": "https://github.com/tbrowder/AlgorithmsIT.git",
   "tags": [
     "algorithm pattern match string text"
   ],

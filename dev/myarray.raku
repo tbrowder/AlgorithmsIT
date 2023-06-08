@@ -1,12 +1,12 @@
 #!/bin/env raku
 
 use lib <../lib>;
-use Index1Array;
+use Classes;
 
 my $text = "abcde";
-my $p = Index1Array.new: $text;
+my $p = ArrayOneBased.new: $text;
 
-my $q = Index1Array.new;
+my $q = ArrayOneBased.new;
 say "p elems ", $p.elems;
 say "q elems ", $q.elems;
 say "inserting a at slot 6 in q";
@@ -31,7 +31,7 @@ say "\$p.head ", $p.head;
 say "\$p.tail ", $p.tail;
 say "\$p.gist ", $p.gist;
 
-my $r = Index1Array.new: 1, 6;
+my $r = ArrayOneBased.new: 1, 6;
 say "r start: ", $r.R-start;
 say "r end: ", $r.R-end;
 say "r.gist ", $r.gist;

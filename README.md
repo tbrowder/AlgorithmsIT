@@ -9,18 +9,21 @@ SYNOPSIS
 ========
 
 ```raku
-use AlgorithmsIT;
+use AlgorithmsIT :ALL;
+use Classes;
 my $P = ArrayOneBased.new: "pattern";
-my $T = ArrayOneBased.new: "some text with pattern in it (or not);
+my $T = ArrayOneBased.new: "some text with pattern in it (or not)";
 my $pi = ArrayOneBased.new: 1, $T.length; # creates an array: [1, 2, ..., $T.length]
 my @matches = KMP-Matcher $T, $P;
 say @matches.gist; 
 # OUTPUT: «[15]␤» # 15 shifts from the first character to the match position
-# The C<@matches> array would be empty if no match were found.
+# The @matches array would be empty if no match were found.
 ```
 
-DESCRIPTION **AlgorithmsIT** is a collection of functions in Reference 1.
-=========================================================================
+DESCRIPTION
+===========
+
+**AlgorithmsIT** is a collection of a small subset of functions in Reference 1.
 
 Credits
 =======

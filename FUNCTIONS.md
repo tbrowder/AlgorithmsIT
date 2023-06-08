@@ -22,9 +22,20 @@ Raku classes
 
       * As an array filled with a number sequence M..N
 
+    Specifying beginning and end:
+
         my $a = Index1Array.new: 1, 6;
+
+    Specifying end only (beginning is 1 by default):
 
       * From a list As an array filled with a number sequence M..N
 
         my $a = Index1Array.new: @list;
+
+Raku functions (subroutiness)
+-----------------------------
+
+  * **KMP-Matcher** (Ref. 1, p. 1005)
+
+  * **Compute-Prefix-Function ** (Ref. 1, p. 1006)
 

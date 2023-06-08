@@ -1,16 +1,31 @@
 unit class Index1Array does Positional does Iterable;
 
 has @.arr;
+
+#| Helper attributes used to instantiate an object
 has Str    $.text;
 has Int    $.R-start;
 has Int    $.R-end;
+has List   $.list;
 
 multi method new(Str $text?) {
     self.bless(:$text);
 }
 
-multi method new(Int $R-start, Int $R-end) {
-    self.bless(:$R-start, :$R-end);
+multi method new(Int $R-start, Int $R-end?) {
+    my ($s, $e);
+    if $R-end.defined {
+        self.bless(:$R-start, :$R-end);
+    }
+    else {
+        my $s = 1;
+        my $e = $R-start;
+        self.bless(:R-start($s), :R-end($e));
+    }
+}
+
+multi method new(List $list) {
+    self.bless(:$list);
 }
 
 submethod TWEAK {
@@ -23,8 +38,11 @@ submethod TWEAK {
     elsif $!R-start.defined and $!R-end.defined {
         die "FATAL: range end is NOT greater than range end []" if $!R-end <= $!R-start;
         for $!R-start .. $!R-end {
-            @!arr[$_] = $_;
+            @!arr.push($_);
         }
+    }
+    elsif $!list.defined {
+        @!arr.push($_) for $!list.values;
     }
 }
 

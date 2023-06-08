@@ -33,9 +33,13 @@ my $a = Index1Array.new: "abbxide x";
 
 =item As an array filled with a number sequence M..N
 
+Specifying beginning and end:
+
 =begin code
 my $a = Index1Array.new: 1, 6;
 =end code
+
+Specifying end only (beginning is 1 by default):
 
 =item From a list
 As an array filled with a number sequence M..N
@@ -44,6 +48,16 @@ As an array filled with a number sequence M..N
 my $a = Index1Array.new: @list;
 =end code
 
+=end item
+
+=head2 Raku functions (subroutiness)
+
+=begin item
+B<KMP-Matcher> (Ref. 1, p. 1005)
+=end item
+
+=begin item
+B<Compute-Prefix-Function > (Ref. 1, p. 1006)
 =end item
 
 

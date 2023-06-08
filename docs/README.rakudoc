@@ -19,12 +19,12 @@ say @matches.gist;
 =end code
 
 =head1 DESCRIPTION
-
 B<AlgorithmsIT> is a collection of functions in Reference 1.
 
 =head1 Credits
 
-To my Raku friend, '@tonyo' for his help with the B<Index1Array> class.
+To my Raku friend, '@tonyo' (on IRC #raku), for his help with the B<Index1Array> class.
+See his many Raku contributions at C<https://github.com/tony-o/>.
 
 =head1 References
 

@@ -3,7 +3,7 @@
 NAME
 ====
 
-**AlgorithmsIT** - Provides some functions from 'Introduction to Algorithms', Third Edition
+**AlgorithmsIT** - Provides some functions from *Introduction to Algorithms*, Third Edition
 
 SYNOPSIS
 ========
@@ -12,21 +12,20 @@ SYNOPSIS
 use AlgorithmsIT;
 my $P = Index1Array.new: "pattern";
 my $T = Index1Array.new: "some text with pattern in it (or not);
-my $pi = Index1Array.new: 1, $T.length;
+my $pi = Index1Array.new: 1, $T.length; # creates an array: [1, 2, ..., $T.length]
 my @matches = KMP-Matcher $T, $P;
-say @matches.gist; # OUTPUT: «[15]␤» # 15 shifts from the first character
-                   # The @matches array would be empty if no match was found
+say @matches.gist; 
+# OUTPUT: «[15]␤» # 15 shifts from the first character to the match position
+# The C<@matches> array would be empty if no match were found.
 ```
 
-DESCRIPTION
-===========
-
-**AlgorithmsIT** is a collection of functions in Reference 1.
+DESCRIPTION **AlgorithmsIT** is a collection of functions in Reference 1.
+=========================================================================
 
 Credits
 =======
 
-To my Raku friend, '@tonyo' for his help with the **Index1Array** class.
+To my Raku friend, '@tonyo' (on IRC #raku), for his help with the **Index1Array** class. See his many Raku contributions at `https://github.com/tony-o/`.
 
 References
 ==========

@@ -65,5 +65,14 @@ is @shifts.elems, 2, "correct number of shifts";
 is @shifts[0], 0, "new pattern 'abab', shift {++$s}";
 is @shifts[1], 4, "new pattern 'abab', shift {++$s}";
 
+$pattern = "ab ab";
+$text = "ab abab ab"; # expect shifts at: 0, 5
+$P .= new: $pattern;
+$T .= new: $text;
+@shifts = KMP-Matcher $T, $P;
+$s = 0;
+is @shifts.elems, 2, "correct number of shifts";
+is @shifts[0], 0, "new pattern 'ab ab', shift {++$s}";
+is @shifts[1], 5, "new pattern 'ab ab', shift {++$s}";
 
 done-testing;

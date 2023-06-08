@@ -9,8 +9,7 @@ possible.
 
 =head2 Raku classes
 
-=begin item
-B<Index1Array>
+=head3 B<Index1Array>
 
 The main feature of this class is that its first slot is at index 1 as
 opposed to 0 in Raku arrays. Only necessary features of a normal array
@@ -51,8 +50,6 @@ As an array filled with a number sequence M..N
 =begin code
 my $a = Index1Array.new: @list;
 =end code
-
-=end item
 
 =head2 Raku functions (subroutiness)
 

@@ -6,33 +6,33 @@ The functions below have been translated from the *psuedo code* in the book into
 Raku classes
 ------------
 
-  * **Index1Array**
+### **Index1Array**
 
-    The main feature of this class is that its first slot is at index 1 as opposed to 0 in Raku arrays. Only necessary features of a normal array have been added, so its feature list is not exhaustive. However, users are encouraged to ask for additional features or submit a PR for such.
+The main feature of this class is that its first slot is at index 1 as opposed to 0 in Raku arrays. Only necessary features of a normal array have been added, so its feature list is not exhaustive. However, users are encouraged to ask for additional features or submit a PR for such.
 
-    The class enables the following ways to instantiate an array:
+The class enables the following ways to instantiate an array:
 
-      * An empty but extendible array
+  * An empty but extendible array
 
-        my $a = Index1Array.new;
+    my $a = Index1Array.new;
 
-      * From a text string
+  * From a text string
 
-        my $a = Index1Array.new: "abbxide x";
+    my $a = Index1Array.new: "abbxide x";
 
-      * As an array filled with a number sequence M..N
+  * As an array filled with a number sequence M..N
 
-    Specifying beginning and end:
+Specifying beginning and end:
 
-        my $a = Index1Array.new: 2, 6;
+    my $a = Index1Array.new: 2, 6;
 
-    Specifying end only (beginning is 1 by default):
+Specifying end only (beginning is 1 by default):
 
-        my $a = Index1Array.new: 5;
+    my $a = Index1Array.new: 5;
 
-      * From a list As an array filled with a number sequence M..N
+  * From a list As an array filled with a number sequence M..N
 
-        my $a = Index1Array.new: @list;
+    my $a = Index1Array.new: @list;
 
 Raku functions (subroutiness)
 -----------------------------

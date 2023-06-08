@@ -18,19 +18,19 @@ are encouraged to ask for additional features or submit a PR for such.
 
 The class enables the following ways to instantiate an array:
 
-=item An empty but extendible array
+=head4 An empty but extendible array
 
 =begin code
 my $a = Index1Array.new;
 =end code
 
-=item From a text string
+=head4 From a text string
 
 =begin code
 my $a = Index1Array.new: "abbxide x";
 =end code
 
-=item As an array filled with a number sequence M..N
+=head4 As an array filled with a number sequence M..N
 
 Specifying beginning and end:
 
@@ -44,7 +44,7 @@ Specifying end only (beginning is 1 by default):
 my $a = Index1Array.new: 5;
 =end code
 
-=item From a list
+=head4 From a list
 
 =begin code
 my $a = Index1Array.new: @list;
@@ -52,13 +52,9 @@ my $a = Index1Array.new: @list;
 
 =head2 Raku functions (subroutines)
 
-=begin item
-B<KMP-Matcher> (Ref. 1, p. 1005)
-=end item
+=head3 B<KMP-Matcher> (Ref. 1, p. 1005)
 
-=begin item
-B<Compute-Prefix-Function> (Ref. 1, p. 1006)
-=end item
+=head3 B<Compute-Prefix-Function> (Ref. 1, p. 1006)
 
 
 

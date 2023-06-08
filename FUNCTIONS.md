@@ -12,15 +12,15 @@ The main feature of this class is that its first slot is at index 1 as opposed t
 
 The class enables the following ways to instantiate an array:
 
-  * An empty but extendible array
+#### An empty but extendible array
 
     my $a = Index1Array.new;
 
-  * From a text string
+#### From a text string
 
     my $a = Index1Array.new: "abbxide x";
 
-  * As an array filled with a number sequence M..N
+#### As an array filled with a number sequence M..N
 
 Specifying beginning and end:
 
@@ -30,14 +30,14 @@ Specifying end only (beginning is 1 by default):
 
     my $a = Index1Array.new: 5;
 
-  * From a list
+#### From a list
 
     my $a = Index1Array.new: @list;
 
 Raku functions (subroutines)
 ----------------------------
 
-  * **KMP-Matcher** (Ref. 1, p. 1005)
+### **KMP-Matcher** (Ref. 1, p. 1005)
 
-  * **Compute-Prefix-Function** (Ref. 1, p. 1006)
+### **Compute-Prefix-Function** (Ref. 1, p. 1006)
 

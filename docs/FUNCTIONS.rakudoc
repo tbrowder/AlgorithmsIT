@@ -66,13 +66,13 @@ No shifts will be reported for a situation with no matches. Of course
 an attempted match of an input string with a longer pattern will
 result in no match.
 
-A pattern: "AACT". A DNA string: "AAACTTTAACTAA" (13 chars).
+A pattern: "AACT". A DNA string: "AAACTTTAACTAA" (13 characters).
 
 The matches:
 
 =begin code
     AAACTTTAACTAA  # 13 characters in this string
-     AACT  AACT    # two matches: the 1st at shift of 1, the 2nd is at a shift of 7
+     AACT  AACT    # two matches: the 1st at a shift of 1, the 2nd is at a shift of 7
 =end code
 
 =head3 B<KMP-Matcher> (Ref. 1, p. 1005)

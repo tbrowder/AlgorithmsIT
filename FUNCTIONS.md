@@ -43,12 +43,12 @@ The following two functions are used to employ the *Knuth-Morris-Pratt* (KMP) al
 
 The functions will find all non-overlapping matches of a specified pattern in an input text string. (It should be very useful in DNA analysis.) Following is an example of a pattern and its matches. The results of a KMP pattern match is a list of the "shifts" for each match. A shift is a number representing the number of characters after the first character of the input string. No shifts will be reported for a situation with no matches. Of course an attempted match of an input string with a longer pattern will result in no match.
 
-A pattern: "AACT". A DNA string: "AAACTTTAACTAA" (13 chars).
+A pattern: "AACT". A DNA string: "AAACTTTAACTAA" (13 characters).
 
 The matches:
 
         AAACTTTAACTAA  # 13 characters in this string
-         AACT  AACT    # two matches: the 1st at shift of 1, the 2nd is at a shift of 7
+         AACT  AACT    # two matches: the 1st at a shift of 1, the 2nd is at a shift of 7
 
 ### **KMP-Matcher** (Ref. 1, p. 1005)
 

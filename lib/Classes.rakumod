@@ -1,4 +1,7 @@
-unit class Index1Array does Positional does Iterable;
+unit module Classes;
+
+
+class Index1Array does Positional does Iterable is export {
 
 has @.arr;
 
@@ -74,3 +77,8 @@ method gist {
     my $s = @!arr[1..*-1].join(', ');
     "[ $s ]";
 }
+
+} # end class Index1Array
+
+#class I1A is Index1Array is export {}
+my constant I1A is export = Index1Array;

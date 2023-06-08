@@ -1,6 +1,7 @@
 unit module AlgorithmsIT;
 
-use Index1Array;
+use Classes;
+
 
 #| Two funtions from Chapter 32 of 'Introduction to Algorithms', 
 #| Third Edition, String Matching, pages 1005-1006.

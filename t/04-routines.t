@@ -1,6 +1,6 @@
 use Test;
 use AlgorithmsIT :ALL;
-use Index1Array;
+use Classes;
 
 my $debug = 0;
 

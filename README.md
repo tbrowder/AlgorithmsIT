@@ -30,7 +30,7 @@ See more details at [FUNCTIONS](./FUNCTIONS.md)
 Credits
 =======
 
-To my Raku friend, '@tonyo' (on IRC #raku), for his help with the **ArrayOneBased** class. See his many Raku contributions at `https://github.com/tony-o/`.
+Thanks to my Raku friend, '@tonyo' (on IRC #raku), for his help with the **ArrayOneBased** class. See his many Raku contributions at `https://github.com/tony-o/`.
 
 References
 ==========

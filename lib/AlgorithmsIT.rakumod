@@ -3,11 +3,11 @@ unit module AlgorithmsIT;
 use Classes;
 
 
-#| Two funtions from Chapter 32 of 'Introduction to Algorithms', 
+#| Two functions from Chapter 32 of 'Introduction to Algorithms',
 #| Third Edition, String Matching, pages 1005-1006.
-#| 
+#|
 #| KMP-Matcher(T, P)
-#| 
+#|
 #| The routines are exported by their page number in the Third Edition.
 
 =begin code
@@ -65,12 +65,12 @@ sub KMP-Matcher(ArrayOneBased $T, ArrayOneBased $P, :$debug  --> List) is export
  1  m = P.length
  2  let pi[1..m] be a new array
  3  pi[1] = 0
- 4  k = 0                                            
- 5  for q = 2 to m                                   
+ 4  k = 0
+ 5  for q = 2 to m
  6      while k > 0 and P[k + 1] not equal P[q]
- 7          k = pi[k]                                
+ 7          k = pi[k]
  8      if P[k + 1] == P[q]
- 9          k = k + 1                                
+ 9          k = k + 1
 10      pi[q] = k
 11  return pi
 =end code
@@ -78,17 +78,15 @@ sub Compute-Prefix-Function(ArrayOneBased $P --> ArrayOneBased) is export(:p1006
 
     my $m = $P.length;
     my $pi = ArrayOneBased.new: 1, $m;            # let pi[1..m] be a new array
-    my $k = 0; 
-    for 2..$m -> $q {                           # for q = 2 to m                                   
+    my $k = 0;
+    for 2..$m -> $q {                           # for q = 2 to m
         while $k > 0 and $P[$k + 1] ne $P[$q] { #     while k > 0 and P[k + 1] not equal P[q]
-            $k = $pi[$k];                       #         k = pi[k]                                
+            $k = $pi[$k];                       #         k = pi[k]
             if $P[$k + 1] eq $P[$q] {           #     if P[k + 1] == P[q]
-                $k = $k + 1;                    #         k = k + 1                                
+                $k = $k + 1;                    #         k = k + 1
             }
             $pi[$q] = $k;                       #     pi[q] = k
         }
     }
     $pi                                         # return pi
 }
-
-

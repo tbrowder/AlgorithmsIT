@@ -27,7 +27,7 @@ See more details at L<FUNCTIONS|./FUNCTIONS.md>
 
 =head1 Credits
 
-To my Raku friend, '@tonyo' (on IRC #raku), for his help with the B<ArrayOneBased> class.
+Thanks to my Raku friend, '@tonyo' (on IRC #raku), for his help with the B<ArrayOneBased> class.
 See his many Raku contributions at C<https://github.com/tony-o/>.
 
 =head1 References

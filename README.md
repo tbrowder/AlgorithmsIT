@@ -10,12 +10,28 @@ SYNOPSIS
 
 ```raku
 use AlgorithmsIT;
+my $P = Index1Array.new: "pattern";
+my $T = Index1Array.new: "some text with pattern in it (or not);
+my $pi = Index1Array.new: 1, $T.length;
+my @matches = KMP-Matcher $T, $P;
+say @matches.gist; # OUTPUT: «[15]␤» # 15 shifts from the first character
+                   # The @matches array would be empty if no match was found
 ```
 
 DESCRIPTION
 ===========
 
-**AlgorithmsIT** is ...
+**AlgorithmsIT** is a collection of functions in Reference 1.
+
+Credits
+=======
+
+To my Raku friend, '@tonyo' for his help with the **Index1Array** class.
+
+References
+==========
+
+#### 1. Thomas H. Cormen, et alii, *Introduction to Algorithms*, Third Edition, February 2009.
 
 AUTHOR
 ======

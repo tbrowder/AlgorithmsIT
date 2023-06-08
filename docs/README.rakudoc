@@ -23,6 +23,8 @@ say @matches.gist;
 
 B<AlgorithmsIT> is a collection of a small subset of functions in Reference 1.
 
+See more details at L<FUNCTIONS|./FUNCTIONS.md>
+
 =head1 Credits
 
 To my Raku friend, '@tonyo' (on IRC #raku), for his help with the B<ArrayOneBased> class.

@@ -25,6 +25,8 @@ DESCRIPTION
 
 **AlgorithmsIT** is a collection of a small subset of functions in Reference 1.
 
+See more details at [FUNCTIONS](./FUNCTIONS.md)
+
 Credits
 =======
 

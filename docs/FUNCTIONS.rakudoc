@@ -45,20 +45,19 @@ my $a = Index1Array.new: 5;
 =end code
 
 =item From a list
-As an array filled with a number sequence M..N
 
 =begin code
 my $a = Index1Array.new: @list;
 =end code
 
-=head2 Raku functions (subroutiness)
+=head2 Raku functions (subroutines)
 
 =begin item
 B<KMP-Matcher> (Ref. 1, p. 1005)
 =end item
 
 =begin item
-B<Compute-Prefix-Function > (Ref. 1, p. 1006)
+B<Compute-Prefix-Function> (Ref. 1, p. 1006)
 =end item
 
 

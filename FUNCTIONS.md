@@ -1,7 +1,10 @@
 Functions from *Introduction to Algorithms, Third Edition*
 ==========================================================
 
-The following functions have been translated from the *psuedo code* in the book into *Raku*. To ease the translation, Raku classes were created to mimic contructs in the pseudo code as much as possible. Current classes include:
+The functions below have been translated from the *psuedo code* in the book into *Raku*. To ease the translation, Raku classes were created to mimic contructs in the pseudo code as much as possible.
+
+Raku classes
+------------
 
   * **Index1Array**
 

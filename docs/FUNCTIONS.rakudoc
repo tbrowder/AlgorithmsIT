@@ -2,10 +2,12 @@
 
 =head1 Functions from I<Introduction to Algorithms, Third Edition>
 
-The following functions have been translated from the I<psuedo code>
+The functions below have been translated from the I<psuedo code>
 in the book into I<Raku>. To ease the translation, Raku classes were
 created to mimic contructs in the pseudo code as much as
-possible. Current classes include:
+possible.
+
+=head2 Raku classes
 
 =begin item
 B<Index1Array>

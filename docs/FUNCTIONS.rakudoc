@@ -8,7 +8,7 @@ created to mimic contructs in the pseudo code as much as
 possible. Current classes include:
 
 =begin item
-Index1Array
+B<Index1Array>
 
 The main feature of this class is that its first slot is at index 1 as
 opposed to 0 in Raku arrays. Only necessary features of a normal array
@@ -35,6 +35,12 @@ my $a = Index1Array.new: "abbxide x";
 my $a = Index1Array.new: 1, 6;
 =end code
 
+=item From a list
+As an array filled with a number sequence M..N
+
+=begin code
+my $a = Index1Array.new: @list;
+=end code
 
 =end item
 

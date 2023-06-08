@@ -10,9 +10,9 @@ SYNOPSIS
 
 ```raku
 use AlgorithmsIT;
-my $P = Index1Array.new: "pattern";
-my $T = Index1Array.new: "some text with pattern in it (or not);
-my $pi = Index1Array.new: 1, $T.length; # creates an array: [1, 2, ..., $T.length]
+my $P = ArrayOneBased.new: "pattern";
+my $T = ArrayOneBased.new: "some text with pattern in it (or not);
+my $pi = ArrayOneBased.new: 1, $T.length; # creates an array: [1, 2, ..., $T.length]
 my @matches = KMP-Matcher $T, $P;
 say @matches.gist; 
 # OUTPUT: «[15]␤» # 15 shifts from the first character to the match position
@@ -25,7 +25,7 @@ DESCRIPTION **AlgorithmsIT** is a collection of functions in Reference 1.
 Credits
 =======
 
-To my Raku friend, '@tonyo' (on IRC #raku), for his help with the **Index1Array** class. See his many Raku contributions at `https://github.com/tony-o/`.
+To my Raku friend, '@tonyo' (on IRC #raku), for his help with the **ArrayOneBased** class. See his many Raku contributions at `https://github.com/tony-o/`.
 
 References
 ==========

@@ -3,24 +3,24 @@ use Classes;
 
 my $debug = 0;
 
-my Index1Array $a;
+my A1B $a;
 my $text = 'some text';
 my @list = <a b c>;
 
 lives-ok {
-    $a = Index1Array.new;
-}, "empty input builds Index1Array ok";
+    $a = A1B.new;
+}, "empty input builds A1B ok";
 is $a.elems, 0;
 
 lives-ok {
-    $a = Index1Array.new: $text;
+    $a = A1B.new: $text;
 }, "text input builds ok";
 is $a[1], 's';
 is $a.length, $text.chars;
 is $a.elems, $text.chars;
 
 lives-ok {
-    $a = Index1Array.new: 2, 5;
+    $a = A1B.new: 2, 5;
 }, "range input builds ok";
 is $a[1], 2;
 is $a[4], 5;
@@ -28,7 +28,7 @@ is $a.length, 4;
 is $a.elems, 4;
 
 lives-ok {
-    $a = Index1Array.new: 5;
+    $a = A1B.new: 5;
 }, "range input with end only builds ok";
 is $a[1], 1;
 is $a[4], 4;
@@ -37,7 +37,7 @@ is $a.length, 5;
 is $a.elems, 5;
 
 lives-ok {
-    $a = Index1Array.new: @list;
+    $a = A1B.new: @list;
 }, "list input builds ok";
 is $a[1], 'a';
 is $a.length, 3;

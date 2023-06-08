@@ -1,7 +1,6 @@
 unit module Classes;
 
-
-class Index1Array does Positional does Iterable is export {
+class ArrayOneBased does Positional does Iterable is export {
 
 has @.arr;
 
@@ -78,7 +77,6 @@ method gist {
     "[ $s ]";
 }
 
-} # end class Index1Array
+} # end class ArrayOneBased
 
-#class I1A is Index1Array is export {}
-my constant I1A is export = Index1Array;
+my constant A1B is export = ArrayOneBased;

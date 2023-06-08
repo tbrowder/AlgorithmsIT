@@ -26,7 +26,7 @@ use Classes;
 #
 # I believe the above line (line 12) is wrong. I think q should be reset to zero.
 =end code
-sub KMP-Matcher(Index1Array $T, Index1Array $P, :$debug  --> List) is export(:p1005) {
+sub KMP-Matcher(ArrayOneBased $T, ArrayOneBased $P, :$debug  --> List) is export(:p1005) {
     my $n = $T.length; #= length of text
     my $m = $P.length; #= length of patttern
 
@@ -36,7 +36,7 @@ sub KMP-Matcher(Index1Array $T, Index1Array $P, :$debug  --> List) is export(:p1
         return @shifts;
     }
 
-    my Index1Array $pi = Compute-Prefix-Function($P);
+    my ArrayOneBased $pi = Compute-Prefix-Function($P);
     #note "DEBUG pi array: {$pi.gist}";# exit if $m = 3;;
     my Int $q = 0;                                       # number of characters matched
     for 1..$n -> $i {                                    # scan the text from left to right
@@ -74,10 +74,10 @@ sub KMP-Matcher(Index1Array $T, Index1Array $P, :$debug  --> List) is export(:p1
 10      pi[q] = k
 11  return pi
 =end code
-sub Compute-Prefix-Function(Index1Array $P --> Index1Array) is export(:p1006) {
+sub Compute-Prefix-Function(ArrayOneBased $P --> ArrayOneBased) is export(:p1006) {
 
     my $m = $P.length;
-    my $pi = Index1Array.new: 1, $m;            # let pi[1..m] be a new array
+    my $pi = ArrayOneBased.new: 1, $m;            # let pi[1..m] be a new array
     my $k = 0; 
     for 2..$m -> $q {                           # for q = 2 to m                                   
         while $k > 0 and $P[$k + 1] ne $P[$q] { #     while k > 0 and P[k + 1] not equal P[q]

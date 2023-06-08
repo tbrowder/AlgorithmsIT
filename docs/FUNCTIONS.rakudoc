@@ -9,7 +9,7 @@ possible.
 
 =head2 Raku classes
 
-=head3 B<Index1Array>
+=head3 B<ArrayOneBased>
 
 The main feature of this class is that its first slot is at index 1 as
 opposed to 0 in Raku arrays. Only necessary features of a normal array
@@ -21,13 +21,13 @@ The class enables the following ways to instantiate an array:
 =head4 An empty but extendible array
 
 =begin code
-my $a = Index1Array.new;
+my $a = ArrayOneBased.new;
 =end code
 
 =head4 From a text string
 
 =begin code
-my $a = Index1Array.new: "abbxide x";
+my $a = ArrayOneBased.new: "abbxide x";
 =end code
 
 =head4 As an array filled with a number sequence M..N
@@ -35,19 +35,19 @@ my $a = Index1Array.new: "abbxide x";
 Specifying beginning and end:
 
 =begin code
-my $a = Index1Array.new: 2, 6;
+my $a = ArrayOneBased.new: 2, 6;
 =end code
 
 Specifying end only (beginning is 1 by default):
 
 =begin code
-my $a = Index1Array.new: 5;
+my $a = ArrayOneBased.new: 5;
 =end code
 
 =head4 From a list
 
 =begin code
-my $a = Index1Array.new: @list;
+my $a = ArrayOneBased.new: @list;
 =end code
 
 =head2 Raku functions (subroutines)

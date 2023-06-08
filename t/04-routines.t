@@ -6,13 +6,13 @@ my $debug = 0;
 
 my @shifts;
 my $text;
-my Index1Array $T;
-my Index1Array $P;
-my Index1Array $pi;
+my ArrayOneBased $T;
+my ArrayOneBased $P;
+my ArrayOneBased $pi;
 my $pattern = 'ababbabbabbababbabb'; # from p. 1011
 
 lives-ok {
-    $P = Index1Array.new: $pattern;
+    $P = ArrayOneBased.new: $pattern;
 }, "pattern array builds ok";
 
 lives-ok {

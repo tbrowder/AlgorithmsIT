@@ -3,24 +3,24 @@ use Classes;
 
 my $debug = 0;
 
-my I1A $a;
+my ArrayOneBased $a;
 my $text = 'some text';
 my @list = <a b c>;
 
 lives-ok {
-    $a = I1A.new;
-}, "empty input builds I1A ok";
+    $a = ArrayOneBased.new;
+}, "empty input builds ArrayOneBased ok";
 is $a.elems, 0;
 
 lives-ok {
-    $a = I1A.new: $text;
+    $a = ArrayOneBased.new: $text;
 }, "text input builds ok";
 is $a[1], 's';
 is $a.length, $text.chars;
 is $a.elems, $text.chars;
 
 lives-ok {
-    $a = I1A.new: 2, 5;
+    $a = ArrayOneBased.new: 2, 5;
 }, "range input builds ok";
 is $a[1], 2;
 is $a[4], 5;
@@ -28,7 +28,7 @@ is $a.length, 4;
 is $a.elems, 4;
 
 lives-ok {
-    $a = I1A.new: 5;
+    $a = ArrayOneBased.new: 5;
 }, "range input with end only builds ok";
 is $a[1], 1;
 is $a[4], 4;
@@ -37,7 +37,7 @@ is $a.length, 5;
 is $a.elems, 5;
 
 lives-ok {
-    $a = I1A.new: @list;
+    $a = ArrayOneBased.new: @list;
 }, "list input builds ok";
 is $a[1], 'a';
 is $a.length, 3;

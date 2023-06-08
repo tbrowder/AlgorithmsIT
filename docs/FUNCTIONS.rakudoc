@@ -36,10 +36,14 @@ my $a = Index1Array.new: "abbxide x";
 Specifying beginning and end:
 
 =begin code
-my $a = Index1Array.new: 1, 6;
+my $a = Index1Array.new: 2, 6;
 =end code
 
 Specifying end only (beginning is 1 by default):
+
+=begin code
+my $a = Index1Array.new: 5;
+=end code
 
 =item From a list
 As an array filled with a number sequence M..N

@@ -24,9 +24,11 @@ Raku classes
 
     Specifying beginning and end:
 
-        my $a = Index1Array.new: 1, 6;
+        my $a = Index1Array.new: 2, 6;
 
     Specifying end only (beginning is 1 by default):
+
+        my $a = Index1Array.new: 5;
 
       * From a list As an array filled with a number sequence M..N
 

@@ -1,7 +1,7 @@
 Revision history for AlgorithmsIT
 
 {{$NEXT}}
-    - Remove incorrect reference to the bug on line 12 of the 'KMP-Matcher'
+    - Remove the reference to a non-existent bug on line 12 of the 'KMP-Matcher'
       routine.
 
 0.0.2  2023-06-09T10:18:21-05:00

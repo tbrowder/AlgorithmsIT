@@ -49,7 +49,7 @@ The matches:
 
         abababcababab  # 13 characters in this string
         abab           # match at a shift of 0
-          abab         # match at a shift of 2 
+          abab         # match at a shift of 2
                abab    # match at a shift of 7
                  abab  # match at a shift of 9
 
@@ -69,8 +69,6 @@ Following is the pseudo code from Ref. 1:
     10      if q == m                                    // is all of P matched?
     11          print "Pattern occurs with shift" i - m
     12          q = pi[q]                                // look for the next match
-
-Line 12 is in error and should read: `q = 0` (a bug report has been filed with the publisher).
 
 The Raku signature:
 

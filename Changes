@@ -1,6 +1,8 @@
 Revision history for AlgorithmsIT
 
 {{$NEXT}}
+
+0.0.2  2023-06-09T10:18:21-05:00
     - Corrected the implementation of the algorithm by
       adding a missing line. It now correctly
       handles overlapping matches as it was

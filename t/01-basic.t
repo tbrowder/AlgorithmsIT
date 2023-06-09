@@ -1,5 +1,6 @@
 use Test;
 use AlgorithmsIT;
+use Classes;
 
 pass "replace me";
 

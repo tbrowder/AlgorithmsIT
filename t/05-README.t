@@ -1,6 +1,6 @@
 use Test;
 
-# This the examplemused in the README
+# This is the example used in the README
 
 use AlgorithmsIT :ALL;
 use Classes;

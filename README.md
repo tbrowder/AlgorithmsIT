@@ -20,7 +20,7 @@ say @matches.gist;
 # positions.  The @matches array would be empty if no match were found.
 ```
 
-Note the original version (v0.0.1) had an error in its implementation so it could not handle overlapping pattern matches. Later versions now work as its authors intended it to, thanks to Professor Cormen's reply to my erroneous bug report.
+Note the original version (v0.0.1) had an error in its implementation so it could not handle overlapping pattern matches. Later versions now work as its authors intended, thanks to Professor Cormen's reply to my erroneous bug report.
 
 DESCRIPTION
 ===========

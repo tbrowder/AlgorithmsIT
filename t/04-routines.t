@@ -58,14 +58,15 @@ is @shifts.head, 1, "new pattern 'bab', first shift";;
 is @shifts.tail, 6, "new pattern 'bab', second shift";;
 
 $pattern = "abab";
-$text = "abababab"; # expect shifts at: 0, 4
+$text = "abababab"; # expect shifts at: 0, 2, 4
 $P .= new: $pattern;
 $T .= new: $text;
 @shifts = KMP-Matcher $T, $P;
 my $s = 0;
-is @shifts.elems, 2, "correct number of shifts";
+is @shifts.elems, 3, "correct number of shifts";
 is @shifts[0], 0, "new pattern 'abab', shift {++$s}";
-is @shifts[1], 4, "new pattern 'abab', shift {++$s}";
+is @shifts[1], 2, "new pattern 'abab', shift {++$s}";
+is @shifts[2], 4, "new pattern 'abab', shift {++$s}";
 
 $pattern = "ab ab";
 $text = "ab abab ab"; # expect shifts at: 0, 5

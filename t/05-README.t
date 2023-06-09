@@ -4,10 +4,13 @@ use Test;
 
 use AlgorithmsIT :ALL;
 use Classes;
-my $P = ArrayOneBased.new: "pattern";
-my $T = ArrayOneBased.new: "some text with pattern in it (or not)";
-my $pi = ArrayOneBased.new: 1, $T.length; # creates an array: [1, 2, ..., $T.length]
+my $P = ArrayOneBased.new: "abab";        # the pattern to be sought
+my $T = ArrayOneBased.new: "abababcabab"; # some text with the pattern in it (or not)";
+my $pi = ArrayOneBased.new: $T.length;    # creates array: [1, 2, ..., $T.length]
 my @matches = KMP-Matcher $T, $P;
-is @matches[0], 15;
+is @matches.elems, 3;
+is @matches[0], 0;
+is @matches[1], 2;
+is @matches[2], 7;
 
 done-testing;

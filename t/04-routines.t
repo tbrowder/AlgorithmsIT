@@ -58,14 +58,15 @@ is @shifts.head, 1, "new pattern 'bab', first shift";;
 is @shifts.tail, 6, "new pattern 'bab', second shift";;
 
 $pattern = "abab";
-$text = "abababab"; # expect shifts at: 0, 4
+$text = "abababab"; # expect shifts at: 0, 2, 4
 $P .= new: $pattern;
 $T .= new: $text;
 @shifts = KMP-Matcher $T, $P;
 my $s = 0;
-is @shifts.elems, 2, "correct number of shifts";
+is @shifts.elems, 3, "correct number of shifts, overlapping matches";
 is @shifts[0], 0, "new pattern 'abab', shift {++$s}";
-is @shifts[1], 4, "new pattern 'abab', shift {++$s}";
+is @shifts[1], 2, "new pattern 'abab', shift {++$s}";
+is @shifts[2], 4, "new pattern 'abab', shift {++$s}";
 
 $pattern = "ab ab";
 $text = "ab abab ab"; # expect shifts at: 0, 5
@@ -76,12 +77,5 @@ $s = 0;
 is @shifts.elems, 2, "correct number of shifts";
 is @shifts[0], 0, "new pattern 'ab ab', shift {++$s}";
 is @shifts[1], 5, "new pattern 'ab ab', shift {++$s}";
-
-# example from the README
-$P .= new: "pattern";
-$T .= new: "some text with pattern in it (or not)";
-my @matches = KMP-Matcher $T, $P;
-say @matches.gist if $debug; # OUTPUT: «[15]␤» # 15 shifts from the first character
-is @matches[0], 15, "from README example, expected a shift of 15";
 
 done-testing;

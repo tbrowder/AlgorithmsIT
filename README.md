@@ -14,13 +14,13 @@ use Classes;
 my $P = ArrayOneBased.new: "abab";        # the pattern to be sought
 my $T = ArrayOneBased.new: "abababcabab"; # text to search (target)
 my @matches = KMP-Matcher $T, $P;         # find any matches, if any
-say @matches.gist; 
-# OUTPUT: «[0, 2, 7]␤» 
-# 0, 2, and 7 are shifts from the input's # first character to the match 
+say @matches.gist;
+# OUTPUT: «[0, 2, 7]␤»
+# 0, 2, and 7 are shifts from the input's # first character to the match
 # positions.  The @matches array would be empty if no match were found.
 ```
 
-Note the previous version had an error in its implementation so it could not handle overlapping pattern matches. This version works as its authors intended it to, thanks to Professor Cormen's reply to my erroneous bug report.
+Note the original version (v0.0.1) had an error in its implementation so it could not handle overlapping pattern matches. Later versions now work as its authors intended it to, thanks to Professor Cormen's reply to my erroneous bug report.
 
 DESCRIPTION
 ===========

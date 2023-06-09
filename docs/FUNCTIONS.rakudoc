@@ -57,22 +57,25 @@ my $a = ArrayOneBased.new: @list;
 The following two functions are used to employ the I<Knuth-Morris-Pratt> (KMP) 
 algorithms for pattern matching. See examples of their use in the test routines.
 
-The functions will find all non-overlapping matches of a specified pattern in
+The functions will find all matches (including overlapping ones) of a specified pattern in
 an input text string. (It should be very useful in DNA analysis.) Following is
 an example of a pattern and its matches. The results of a KMP pattern match
 is a list of the "shifts" for each match. A shift is a number representing
-the number of characters after the first character of the input string.
+the number of characters after the first character of the input string at which the match is found.
 No shifts will be reported for a situation with no matches. Of course
 an attempted match of an input string with a longer pattern will
 result in no match.
 
-A pattern: "AACT". A DNA string: "AAACTTTAACTAA" (13 characters).
+A pattern: "abab". A string: "abababcabababa" (13 characters).
 
 The matches:
 
 =begin code
-    AAACTTTAACTAA  # 13 characters in this string
-     AACT  AACT    # two matches: the 1st at a shift of 1, the 2nd is at a shift of 7
+    abababcababab  # 13 characters in this string
+    abab           # match at a shift of 0
+      abab         # match at a shift of 2 
+           abab    # match at a shift of 7
+             abab  # match at a shift of 9
 =end code
 
 =head3 B<KMP-Matcher> (Ref. 1, p. 1005)

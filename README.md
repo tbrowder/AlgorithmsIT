@@ -11,14 +11,16 @@ SYNOPSIS
 ```raku
 use AlgorithmsIT :ALL;
 use Classes;
-my $P = ArrayOneBased.new: "pattern";
-my $T = ArrayOneBased.new: "some text with pattern in it (or not)";
-my $pi = ArrayOneBased.new: 1, $T.length; # creates an array: [1, 2, ..., $T.length]
+my $P = ArrayOneBased.new: "abab";        # the pattern to be sought
+my $T = ArrayOneBased.new: "abababcabab"; # some text with the pattern in it (or not)";
+my $pi = ArrayOneBased.new: $T.length;    # creates array: [1, 2, ..., $T.length]
 my @matches = KMP-Matcher $T, $P;
 say @matches.gist; 
-# OUTPUT: «[15]␤» # 15 shifts from the first character to the match position
+# OUTPUT: «[0, 2, 7]␤» # 0, 2, and 7 shifts from the first character to the match positions
 # The @matches array would be empty if no match were found.
 ```
+
+Note the previous version had an error in its implementation so it could not handle overlapping pattern matches.
 
 DESCRIPTION
 ===========

@@ -11,12 +11,12 @@ B<AlgorithmsIT> - Provides some functions from I<Introduction to Algorithms>, Th
 use AlgorithmsIT :ALL;
 use Classes;
 my $P = ArrayOneBased.new: "abab";        # the pattern to be sought
-my $T = ArrayOneBased.new: "abababcabab"; # text with or without the pattern;
-my @matches = KMP-Matcher $T, $P;         # find any matches
+my $T = ArrayOneBased.new: "abababcabab"; # text to search (target)
+my @matches = KMP-Matcher $T, $P;         # find any matches, if any
 say @matches.gist; 
 # OUTPUT: «[0, 2, 7]␤» 
-#   0, 2, and 7 are shifts from the input's # first character to the match 
-#   positions.  The @matches array would be empty if no match were found.
+# 0, 2, and 7 are shifts from the input's # first character to the match 
+# positions.  The @matches array would be empty if no match were found.
 =end code
 
 Note the previous version had an error in its implementation so it could not

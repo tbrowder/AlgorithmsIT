@@ -12,7 +12,7 @@ use AlgorithmsIT :ALL;
 use Classes;
 my $P = ArrayOneBased.new: "abab";        # the pattern to be sought
 my $T = ArrayOneBased.new: "abababcabab"; # text to search (target)
-my @matches = KMP-Matcher $T, $P;         # find any matches, if any
+my @matches = KMP-Matcher $T, $P;         # find matches, if any
 say @matches.gist;
 # OUTPUT: «[0, 2, 7]␤»
 # 0, 2, and 7 are shifts from the input's # first character to the match

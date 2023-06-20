@@ -1,6 +1,8 @@
 Revision history for AlgorithmsIT
 
 {{$NEXT}}
+
+0.0.4  2023-06-20T17:39:37-05:00
     - Fix a bug caused by an improper use of a range input
       for the $pi array
       + add a test for it

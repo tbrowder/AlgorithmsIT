@@ -1,6 +1,6 @@
 use Test;
 use AlgorithmsIT :ALL;
-use Classes;
+use AlgorithmsIT::Classes;
 
 my $debug = 0;
 

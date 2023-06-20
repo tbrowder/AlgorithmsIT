@@ -1,6 +1,7 @@
 use Test;
-use AlgorithmsIT;
-use Classes;
+
+use AlgorithmsIT :ALL;
+use AlgorithmsIT::Classes;
 
 pass "replace me";
 

@@ -1,6 +1,7 @@
 unit module AlgorithmsIT;
 
-use Classes;
+#use Classes;
+use AlgorithmsIT::Classes;
 
 
 #| Two functions from Chapter 32 of 'Introduction to Algorithms',
@@ -66,7 +67,8 @@ sub KMP-Matcher(ArrayOneBased $T, ArrayOneBased $P, :$debug  --> List) is export
 sub Compute-Prefix-Function(ArrayOneBased $P --> ArrayOneBased) is export(:p1006) {
 
     my $m = $P.length;
-    my $pi = ArrayOneBased.new: 1, $m;          # let pi[1..m] be a new array
+    my $pi = ArrayOneBased.new;                 # let pi[1..m] be a new array
+                                                # (the ArrayOneBased class can be extended as needed)
     $pi[1] = 0;
     my $k  = 0;
     for 2..$m -> $q {                           # for q = 2 to m

@@ -10,7 +10,7 @@ SYNOPSIS
 
 ```raku
 use AlgorithmsIT :ALL;
-use Classes;
+use AlgorithnsIT::Classes;
 my $P = ArrayOneBased.new: "abab";        # the pattern to be sought
 my $T = ArrayOneBased.new: "abababcabab"; # text to search (target)
 my @matches = KMP-Matcher $T, $P;         # find matches, if any

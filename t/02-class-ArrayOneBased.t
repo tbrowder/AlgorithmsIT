@@ -1,5 +1,7 @@
 use Test;
-use Classes;
+
+use AlgorithmsIT :ALL;
+use AlgorithmsIT::Classes;
 
 my $debug = 0;
 

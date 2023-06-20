@@ -112,7 +112,7 @@ Following is the pseudo code from Ref. 1:
 
 =begin code
  1  m = P.length
- 2  let pi[1..m] be a new array
+ 2  let pi[1..m] be a new array  #= The ArrayOneBased class can be expanded as needed
  3  pi[1] = 0
  4  k = 0
  5  for q = 2 to m

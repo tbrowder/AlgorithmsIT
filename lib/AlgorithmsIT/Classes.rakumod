@@ -1,4 +1,4 @@
-unit module Classes;
+unit module AlgorithmsIT::Classes;
 
 class ArrayOneBased does Positional does Iterable is export {
 
@@ -38,7 +38,7 @@ submethod TWEAK {
         }
     }
     elsif $!R-start.defined and $!R-end.defined {
-        die "FATAL: range end is NOT greater than range end []" if $!R-end <= $!R-start;
+        die "FATAL: range end [{$!R-end}] is NOT greater than range start [{$!R-start}] " if $!R-end <= $!R-start;
         for $!R-start .. $!R-end {
             @!arr.push($_);
         }

@@ -3,7 +3,7 @@ use Test;
 # This is the example used in the README
 
 use AlgorithmsIT :ALL;
-use Classes;
+use AlgorithmsIT::Classes;
 my $P = ArrayOneBased.new: "abab";        # the pattern to be sought
 my $T = ArrayOneBased.new: "abababcabab"; # some text with the pattern in it (or not)";
 my $pi = ArrayOneBased.new: $T.length;    # creates array: [1, 2, ..., $T.length]
